@@ -4,7 +4,7 @@ class Learning extends Component {
   render() {
     return (
       <div>
-      <h1>Hello, this is class react components</h1>
+      <h1>Hello this is class react components</h1>
       </div>
     );
   }
