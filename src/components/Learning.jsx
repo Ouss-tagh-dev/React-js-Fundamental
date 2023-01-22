@@ -11,12 +11,15 @@ class Learning extends Component {
       ],
     };
   }
+  clickHandler = () => {
+    console.log("Hello you clicked btn");
+    alert("Hello you clicked btn");
+  };
   render() {
     return (
       <div>
+        <button onClick={this.clickHandler}>Click Me</button>
         <h1>Fruite name is {this.state.fruits[0].name}</h1>
-        <h1>Fruite name is {this.state.fruits[1].name}</h1>
-        <h1>Fruite name is {this.state.fruits[2].name}</h1>
       </div>
     );
   }
