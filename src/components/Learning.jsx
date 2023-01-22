@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 
 class Learning extends Component {
-  state = {
-    fruits: [
-      { name: "Mango", weight: "120gm" },
-      { name: "Apple", weight: "20gm" },
-      { name: "Orange", weight: "60gm" },
-    ],
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      fruits: [
+        { name: "Mango", weight: "120gm" },
+        { name: "Apple", weight: "20gm" },
+        { name: "Orange", weight: "60gm" },
+      ],
+    };
+  }
   render() {
     return (
       <div>
