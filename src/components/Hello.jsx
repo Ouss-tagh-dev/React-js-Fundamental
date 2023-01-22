@@ -1,7 +1,7 @@
-function Hello() {
+function Hello(props) {
   return (
     <div>
-      <h1>Hello this is function react components</h1>
+      <h1>Hello I 'm learning {props.name}</h1>
     </div>
   );
 }
