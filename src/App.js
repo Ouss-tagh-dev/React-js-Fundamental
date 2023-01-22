@@ -1,10 +1,10 @@
 import "./App.css";
-import Ouss from "./components/Learning";
+import Hook from "./components/Hook";
 
 function App() {
   return (
     <div className="App">
-      <Ouss />
+      <Hook />
     </div>
   );
 }
