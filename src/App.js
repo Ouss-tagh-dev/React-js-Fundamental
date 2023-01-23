@@ -2,23 +2,8 @@ import { Component } from "react";
 class App extends Component {
   state = {
     email: "",
-    password: "",
-    emailError: "",
-    passwordError: "",
+    details: "",
   };
-
-  validate() {
-    if (!this.state.email > 0 && !this.state.password > 0) {
-      this.setState({ emailError: "Email and Password Required" });
-    } else if (!this.state.email > 0) {
-      this.setState({ emailError: "Email Required" });
-    } else if (!this.state.password > 0) {
-      this.setState({ passwordError: "Password Required" });
-    } else {
-      return true;
-    }
-  }
-
   formSubmit = (e) => {
     e.preventDefault();
     if (this.validate()) {
@@ -28,8 +13,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>{"Login Panel"}</h1>
-
         <div>
           <form onSubmit={this.formSubmit}>
             <div className="form-group" style={{ marginLeft: 200 }}>
@@ -43,22 +26,17 @@ class App extends Component {
                 }}
               />
               <br />
-              <strong style={{ color: "red" }}>{this.state.emailError}</strong>
+
+              <label>Details</label>
               <br />
-              <label>Password</label>
-              <br />
-              <input
-                type="password"
-                name="password"
+              <textarea
                 onChange={(event) => {
-                  this.setState({ password: event.target.value });
+                  this.setState({ details: event.target.value });
                 }}
-              />
-              <br />
-              <strong style={{ color: "red" }}>
-                {this.state.passwordError}
-              </strong>
-              <br />
+              >
+                write on here
+              </textarea>
+              <h6>{this.state.details}</h6>
               <button type="submit">Submit</button>
             </div>
           </form>
