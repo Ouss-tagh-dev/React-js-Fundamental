@@ -17,7 +17,7 @@ class Check extends Component {
   render() {
     return (
       <div>
-        <input type="text" name="" onChange={this.changeName} />
+        <input type="text" value={this.state.name} onChange={this.changeName} />
         <h1>Hello {this.state.name}</h1>
       </div>
     );
