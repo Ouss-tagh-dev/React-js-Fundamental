@@ -6,7 +6,6 @@ import {
   Navbar,
   Container,
   Nav,
-  NavDropdown,
   Form,
 } from "react-bootstrap";
 class App extends Component {
@@ -15,7 +14,7 @@ class App extends Component {
       <div className="App">
         <Navbar bg="light" expand="lg">
           <Container fluid>
-            <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+            <Navbar.Brand href="#">React bootstrap</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
               <Nav
@@ -23,21 +22,10 @@ class App extends Component {
                 style={{ maxHeight: "100px" }}
                 navbarScroll
               >
-                <Nav.Link href="#action1">Home</Nav.Link>
-                <Nav.Link href="#action2">Link</Nav.Link>
-                <NavDropdown title="Link" id="navbarScrollingDropdown">
-                  <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action4">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action5">
-                    Something else here
-                  </NavDropdown.Item>
-                </NavDropdown>
-                <Nav.Link href="#" disabled>
-                  Link
-                </Nav.Link>
+                <Nav.Link href="#action2">About Us</Nav.Link>
+                <Nav.Link href="#action1">Contact Us</Nav.Link>
+                <Nav.Link href="#action2">Blog Us</Nav.Link>
+                <Nav.Link href="#action1">Profile</Nav.Link>
               </Nav>
               <Form className="d-flex">
                 <Form.Control
@@ -59,16 +47,6 @@ class App extends Component {
           </Breadcrumb.Item>
           <Breadcrumb.Item active>Data</Breadcrumb.Item>
         </Breadcrumb>
-        
-        <Button variant="primary">Primary</Button>{" "}
-        <Button variant="secondary">Secondary</Button>{" "}
-        <Button variant="success">Success</Button>{" "}
-        <Button variant="warning">Warning</Button>{" "}
-        <Button variant="danger">Danger</Button>{" "}
-        <Button variant="info">Info</Button>{" "}
-        <Button variant="light">Light</Button>{" "}
-        <Button variant="dark">Dark</Button>
-        <Button variant="link">Link</Button>
       </div>
     );
   }
