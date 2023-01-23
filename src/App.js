@@ -17,7 +17,8 @@ class App extends Component {
               <li> Name : {item.age}</li>
               <li> Name : {item.grad}</li>
             </ul>
-            <button>Edit</button> | <button>Delete</button>
+            <button className="btn btn-sm btn-success">Edit</button>| |
+            <button className="btn btn-sm btn-danger">Delete</button>
           </li>
         </ul>
       );
@@ -25,7 +26,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>{"Student List"}</h1>
-        <div>{items}</div>
+        <ul className="list">{items}</ul>
       </div>
     );
   }
