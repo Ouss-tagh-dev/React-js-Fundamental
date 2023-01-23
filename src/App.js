@@ -5,10 +5,19 @@ class App extends Component {
     password: "",
   };
 
+  validate() {
+    if(){
+
+    }else if(){
+      
+    }else{return true}
+  }
+
   formSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state.email);
-    console.log(this.state.password);
+    if(this.validate()){
+      alert("Form Submit Done")
+    }
   };
   render() {
     return (
@@ -28,6 +37,10 @@ class App extends Component {
                 }}
               />
               <br />
+              <strong style={{ color: "red" }}>
+                Email and Password Invalid{" "}
+              </strong>
+              <br />
               <label>Password</label>
               <br />
               <input
@@ -37,6 +50,10 @@ class App extends Component {
                   this.setState({ password: event.target.value });
                 }}
               />
+              <br />
+              <strong style={{ color: "red" }}>
+                Email and Password Invalid{" "}
+              </strong>
               <br />
               <button type="submit">Submit</button>
             </div>
