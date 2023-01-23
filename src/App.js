@@ -3,27 +3,33 @@ class App extends Component {
   state = {
     email: "",
     password: "",
+    emailError: "",
+    passwordError: "",
   };
 
   validate() {
-    if(){
-
-    }else if(){
-      
-    }else{return true}
+    if (!this.state.email > 0 && !this.state.password > 0) {
+      this.setState({ emailError: "Email and Password Required" });
+    } else if (!this.state.email > 0) {
+      this.setState({ emailError: "Email Required" });
+    } else if (!this.state.password > 0) {
+      this.setState({ passwordError: "Password Required" });
+    } else {
+      return true;
+    }
   }
 
   formSubmit = (e) => {
     e.preventDefault();
-    if(this.validate()){
-      alert("Form Submit Done")
+    if (this.validate()) {
+      alert("Form Submit Done");
     }
   };
   render() {
     return (
       <div className="App">
-        <h1>{this.state.email}</h1>
-        <h1>{this.state.password}</h1>
+        <h1>{"Login Panel"}</h1>
+
         <div>
           <form onSubmit={this.formSubmit}>
             <div className="form-group" style={{ marginLeft: 200 }}>
@@ -37,9 +43,7 @@ class App extends Component {
                 }}
               />
               <br />
-              <strong style={{ color: "red" }}>
-                Email and Password Invalid{" "}
-              </strong>
+              <strong style={{ color: "red" }}>{this.state.emailError}</strong>
               <br />
               <label>Password</label>
               <br />
@@ -52,7 +56,7 @@ class App extends Component {
               />
               <br />
               <strong style={{ color: "red" }}>
-                Email and Password Invalid{" "}
+                {this.state.passwordError}
               </strong>
               <br />
               <button type="submit">Submit</button>
