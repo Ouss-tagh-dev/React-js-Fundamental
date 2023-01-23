@@ -8,12 +8,17 @@ class App extends Component {
     let myValue = e.target.value; //Getting value
     this.setState({ [val]: myValue }); //value set on the state
   };
+
+  formSubmit = (e) => {
+    e.preventDefault();
+    console.log("Hi Oussama");
+  };
   render() {
     return (
       <div className="App">
         <h1>Hello {this.state.username}</h1>
         <div>
-          <form>
+          <form onSubmit={this.formSubmit}>
             <div className="form-group" style={{ marginLeft: 200 }}>
               <label>Username</label>
               <br />
