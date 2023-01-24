@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import { Navbar, Container, Nav } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import App from "./App";
+// import App from "./App";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Blog from "./components/Blog";
 import Profile from "./components/Profile";
+import Writepost from './components/Wrtightpost';
 export default class Header extends Component {
   render() {
     return (
@@ -49,6 +50,9 @@ export default class Header extends Component {
           </Route>
           <Route path="/profile">
             <Profile />
+          </Route>
+          <Route path="/writepost">
+            <Writepost />
           </Route>
         </Switch>
       </Router>
