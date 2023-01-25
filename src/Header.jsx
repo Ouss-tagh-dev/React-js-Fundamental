@@ -1,12 +1,18 @@
 import React, { Component } from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink,
+} from "react-router-dom";
 // import App from "./App";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Blog from "./components/Blog";
 import Profile from "./components/Profile";
-import Writepost from './components/Wrtightpost';
+import Writepost from "./components/Wrtightpost";
 export default class Header extends Component {
   render() {
     return (
@@ -14,22 +20,32 @@ export default class Header extends Component {
         <div>
           <Navbar bg="light" expand="lg">
             <Navbar.Brand>
-              <Link to="/">Oussama</Link>
+              <NavLink exact activeStyle={{ color: "orange" }}  to="/">
+                Oussama
+              </NavLink>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
                 <Nav.Link>
-                  <Link to="/about">About Us</Link>
+                  <NavLink activeStyle={{ color: "orange" }} to="/about">
+                    About Us
+                  </NavLink>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link to="/contact">Contact Us</Link>
+                  <NavLink activeStyle={{ color: "orange" }} to="/contact">
+                    Contact Us
+                  </NavLink>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link to="/blog">Blog</Link>
+                  <NavLink activeStyle={{ color: "orange" }} to="/blog">
+                    Blog
+                  </NavLink>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link to="/profile">Profile</Link>
+                  <NavLink activeStyle={{ color: "orange" }} to="/profile">
+                    Profile
+                  </NavLink>
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>
